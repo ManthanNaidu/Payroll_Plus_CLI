@@ -1,0 +1,44 @@
+project path:
+cd folder path
+
+compile:
+javac -cp "lib/*" src/config/DBConnection.java src/models/*.java src/services/*.java src/utils/*.java src/Main.java
+
+
+run:
+java --enable-native-access=ALL-UNNAMED -cp "lib/*;src" Main
+
+username:admin
+password:1234
+
+folder structure:
+
+PayrollPlusCLI
+│
+├── lib
+│   └── sqlite-jdbc.jar
+│
+├── database
+│   └── payroll.db
+│
+└── src
+    │
+    ├── Main.java
+    │
+    ├── config
+    │   └── DBConnection.java
+    │
+    ├── models
+    │   ├── Employee.java
+    │   ├── Attendance.java
+    │   └── Payroll.java
+    │
+    ├── services
+    │   ├── AuthService.java
+    │   ├── EmployeeService.java
+    │   ├── AttendanceService.java
+    │   ├── SalaryService.java
+    │   └── PayslipService.java
+    │
+    └── utils
+        └── InputValidator.java
